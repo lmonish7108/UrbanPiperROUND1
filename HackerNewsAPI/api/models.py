@@ -3,6 +3,9 @@ import datetime
 
 # Create your models here.
 class Content(models.Model):
+	"""
+	Content Model where all the stories will be stored.
+	"""
 	id = models.IntegerField(primary_key=True)
 	title = models.CharField(max_length=512, blank=False)
 	by = models.CharField(max_length=64, blank=False)
@@ -12,6 +15,9 @@ class Content(models.Model):
 
 
 class NewStories(models.Model):
+	"""
+	Singleton Module to compare time difference for updation of Stories with HackerNews.
+	"""
 	time_value = models.DateTimeField(auto_now=True)
 
 	def save(self, *args, **kwargs):
