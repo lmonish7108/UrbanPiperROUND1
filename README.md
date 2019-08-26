@@ -9,7 +9,6 @@ To run locally you can just clone the repo.
 
 pip install -r requirements.txt
 
+I have added db.sqlite3 file as well, so you can directly run:
+
 python manage.py runserver
-
-
-
