@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HACKER NEWS</title>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/static/api/main.css">
+	<script src="/static/api/main.js"></script>
+</head>
+<body>
+	<div class="navigation-menu">
+		<div class="nav-wrapper">
+			<div class="item">
+				<a href="/">Hacker News</a>
+			</div>
+			<div class="item">
+				<a href="/">Home</a>
+			</div>
+			<div class="item">
+				<a href="/top/news">Top News</a>
+			</div>
+			<div class="item">
+				<input list="titles" id="search_str" type="text" name="search" placeholder="Search...">
+			</div>
+			<datalist id="titles">
+
+			</datalist>
+		</div>
+	</div>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "api/Base.html" %}
+
+{% block content %}
+	<script>
+		window._json_response = JSON.parse('{{stories_list|safe|escapejs}}');
+	</script>
+	{{search_title}}
+	<table id="json_response_table">
+		<tr>
+			<th>
+				Topic
+			</th>
+			<th>
+				Author
+			</th>
+			<th>
+				Upvotes
+			</th>
+			<th>
+				Sentiment
+			</th>
+		</tr>
+	</table>
+{% endblock %}
